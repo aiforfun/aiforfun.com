@@ -1,7 +1,17 @@
-deploy:
-  provider: s3
-  access_key_id: $AWS_ACCESS_KEY_ID
-  secret_access_key: $AWS_SECRET_ACCESS_KEY
-  bucket: "aiforfun.com"
-  skip_cleanup: true
-  region: $AWS_DEFAULT_REGION
+language: python
+
+before_install:
+install:
+
+before_script:
+script:
+  python s3deploy.py
+
+after_success:
+after_failure:
+
+#before_deploy
+#deploy
+#after_deploy
+
+after_script:
