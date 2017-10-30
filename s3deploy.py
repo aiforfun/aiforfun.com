@@ -2,6 +2,7 @@ from __future__ import print_function
 import os
 import sys
 import boto
+import boto.s3.connection
 from boto.s3.key import Key
 
 
@@ -14,7 +15,9 @@ BUCKET_NAME = os.environ['AWS_S3_BUCKET_NAME']
 
 conn = boto.s3.connect_to_region(AWS_DEFAULT_REGION, 
 	aws_access_key_id=AWS_ACCESS_KEY_ID,
-   	aws_secret_access_key=AWS_SECRET_ACCESS_KEY)
+   	aws_secret_access_key=AWS_SECRET_ACCESS_KEY,
+   	is_secure=True,
+   	calling_format=boto.s3.connection.OrdinaryCallingFormat())
 
 bucket = conn.get_bucket(BUCKET_NAME)
 
