@@ -10,9 +10,13 @@ Our methodology (Code first before any discussion):
 3. Code something.
 4. Invite other members to join and contribute.
 
-Host: AWS S3
-CI/CD: Travis CI (In progress)
+- Host: AWS S3
+- CI/CD: Travis CI (In progress)
 
 Deployment Process in 2 simple steps:
 1. Commit code to GitHub
 2. Travis CI will build & deploy directly to AWS S3.
+
+Note:
+If you don’t want to run auto deployment for a particular commit for any reason, add [ci skip] or [skip ci] to the git commit message.
+Commits that have [ci skip] or [skip ci] anywhere in the commit messages are ignored by Travis CI.

@@ -1,11 +1,15 @@
 language: python
+branches:
+  only:
+    - master
 
 before_install:
 install:
+  pip install boto
 
 before_script:
 script:
-  python s3deploy.py
+  - python push-docs-to-s3.py static
 
 after_success:
 after_failure:
