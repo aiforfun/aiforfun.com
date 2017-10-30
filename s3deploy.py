@@ -12,7 +12,7 @@ AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
 AWS_DEFAULT_REGION = os.environ['AWS_DEFAULT_REGION']
 BUCKET_NAME = os.environ['AWS_S3_BUCKET_NAME']
 
-conn = boto.connect_to_region(AWS_DEFAULT_REGION, 
+conn = boto.s3.connect_to_region(AWS_DEFAULT_REGION, 
 	aws_access_key_id=AWS_ACCESS_KEY_ID,
    	aws_secret_access_key=AWS_SECRET_ACCESS_KEY)
 
