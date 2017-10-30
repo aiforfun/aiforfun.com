@@ -9,7 +9,7 @@ install:
 
 before_script:
 script:
-  - python push-docs-to-s3.py static
+  - python s3deploy.py static
 
 after_success:
 after_failure:
