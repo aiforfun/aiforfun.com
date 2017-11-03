@@ -34,4 +34,5 @@ def uploadFolder(folder):
 		for dirname in dirnames:
 			uploadFolder(dirname)
 
+
 uploadFolder(root)
